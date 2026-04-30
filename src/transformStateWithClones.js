@@ -7,7 +7,7 @@
  */
 function transformStateWithClones(state, actions) {
   const result = [];
-  const tempState = structuredClone(state);
+  const tempState = { ...state };
 
   for (const e of actions) {
     switch (e.type) {
